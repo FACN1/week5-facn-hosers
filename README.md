@@ -66,7 +66,13 @@ We don't want to have to render anything too complicated ATM, so basically a lis
 
 #To dos:
 - [ ] Make skeleton files
-- [ ] Investigate API's and how to make requests using request.module
+- [ ] Investigate API's
+- [ ] Work out how to make requests using request.module
+- [ ] Set up basic server modules mainly the routes
+ - [ ] one to deal with home and assets
+ - [ ] one to deal with making the requests from the main.js
+ - [ ] test with shot
+- [ ] Use client side JS to make a request straight away
 
 #SYNTAX
 ```js
