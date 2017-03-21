@@ -3,7 +3,7 @@ Repo for FAC'N Hoser's Feeeeed project
 
 # User stories
 
-> I am a user who wants to find out the latest news stories, Matt Gregory (@mantagen) latest tweets, and london travel information on one page
+> I am a user who wants to find out the latest news stories, Matt Gregory's latest tweets, and london travel information on one page
 
 # Basic interface
 
@@ -29,8 +29,8 @@ Repo for FAC'N Hoser's Feeeeed project
         renderfeed2(response2)
         renderfeed3(response3)
       }
-      ```
-      -Stretch goals : refresh each feed individual, refresh some automatically
+ ```
+   - Stretch goals : refresh each feed individual, refresh some automatically
 
 # File Structure
 
