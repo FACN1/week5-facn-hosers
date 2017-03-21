@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-//Create homeHandler function for / route
+//Create homeHandler function for '/' route
 function homeHandler(req, res){
   var filePath = path.join(__dirname, '..', 'public/index.html');
   fs.readFile(filePath, function(error, file){
