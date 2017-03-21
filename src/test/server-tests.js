@@ -20,5 +20,12 @@ tape('Home Route', function(t){
     t.equal(res.payload, indexFile, 'Index.html was found');
     t.end();
   })
-}
-)
+})
+
+tape('Error Route', function(t){
+  shot.inject(router, {method: 'get', url:'/error'}, function(res){
+    t.equal(res.statusCode, 404, 'test that status code is 404');
+    t.equal(res.payload, 'page not found', 'page was not found');
+    t.end();
+  })
+})
