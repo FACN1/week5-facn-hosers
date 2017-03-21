@@ -56,7 +56,7 @@ Repo for FAC'N Hoser's Feeeeed project
     -*link to Travis*
 
 
-#Potential API's
+# Potential API's
 
 - MG's Twitter
 - A news feed
