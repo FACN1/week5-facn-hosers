@@ -73,6 +73,7 @@ We don't want to have to render anything too complicated ATM, so basically a lis
  - [ ] one to deal with making the requests from the main.js
  - [ ] test with shot
 - [ ] Use client side JS to make a request straight away
+- [ ] link git to travis 
 
 #SYNTAX
 ```js
