@@ -6,6 +6,7 @@ var routes = {
   '404':handler.errorHandler,
   '/assets/main.css': handler.assetsHandler,
   '/assets/main.js': handler.assetsHandler,
+  '/assets/render.js': handler.assetsHandler,
   '/requestAPIS': handler.APIHandler
 }
 
