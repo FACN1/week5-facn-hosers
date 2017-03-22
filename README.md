@@ -1,4 +1,6 @@
-# week5-facn-hosers
+# week5-facn-hosers 
+[![Build Status](https://travis-ci.org/FACN1/week5-facn-hosers.svg?branch=master)](https://travis-ci.org/FACN1/week5-facn-hosers)
+
 Repo for FAC'N Hoser's Feeeeed project
 
 # User stories
