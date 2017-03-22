@@ -1,4 +1,4 @@
-const keys = require('./keys');
+const keys = require('./keys') || "HI";
 
 var weatherAPI = 'http://api.apixu.com/v1/current.json?key=' + keys.weather + '&q=London';
 var roadsAPI = 'https://api.tfl.gov.uk/road?app_id=' + keys.roadsID + '&app_key=' + keys.roads;
