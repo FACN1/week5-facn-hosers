@@ -14,4 +14,4 @@ var requestModule = (function(){
   }
 })();
 
-requestModule.makeRequest('GET', '/requestAPIS', console.log);
+requestModule.makeRequest('GET', '/requestAPIS', renderModule.renderFeed);
