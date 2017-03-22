@@ -22,6 +22,18 @@ tape('Home Route', function(t){
   })
 })
 
+tape('Assets Route', function(t){
+  //Get a file to compare to in our tests:
+  var filePath = path.join(__dirname, '../..', 'public/assets/main.css')
+  var indexFile = fs.readFileSync(filePath).toString();
+  //Use shot inject to test home route
+  shot.inject(router, {method: 'get', url:'/assets/main.css'}, function(res){
+    t.equal(res.statusCode, 200, 'test that status code is 200');
+    t.equal(res.payload, indexFile, 'main.css was found');
+    t.end();
+  })
+})
+
 tape('Error Route', function(t){
   shot.inject(router, {method: 'get', url:'/error'}, function(res){
     t.equal(res.statusCode, 404, 'test that status code is 404');
