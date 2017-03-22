@@ -1,6 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
+var extensionType = {
+    'js': 'application/javascript',
+    'css': 'text/css'
+  }
 //Create homeHandler function for '/' route
 function homeHandler(req, res){
   var filePath = path.join(__dirname, '..', 'public/index.html');
@@ -15,6 +19,30 @@ function homeHandler(req, res){
   })
 }
 
+//Create handler for main.js and main.css
+function assetsHandler(req, res){
+  //Handler Variables
+  var url = req.url;
+  console.log(url);
+  var extension = url.split('.')[1];
+  var filePath = path.join(__dirname, '..', 'public', url);
+  fs.readFile(filePath, function (err, file) {
+    if (err) {
+      console.log(err);
+      return;
+    }
+    else{
+      res.writeHead(200, {"content-type":extensionType[extension]});
+      res.end(file);
+    }
+  })
+}
+
+//Create handler for API requests
+function APIHandler(req, res){
+  // call request module;
+}
+
 //Create 404 handler
 function errorHandler(req, res){
   res.writeHead(404, {'content-type': 'text/plain'});
@@ -23,5 +51,7 @@ function errorHandler(req, res){
 
 module.exports = {
   homeHandler: homeHandler,
+  assetsHandler: assetsHandler,
+  APIHandler: APIHandler,
   errorHandler: errorHandler
 }
