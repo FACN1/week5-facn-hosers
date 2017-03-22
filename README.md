@@ -67,13 +67,14 @@ We don't want to have to render anything too complicated ATM, so basically a lis
 #To dos:
 - [x] Make skeleton files
 - [x] Investigate API's
-- [ ] Work out how to make requests using request.module
+- [x] Work out how to make requests using request.module
 - [x] Set up basic server modules mainly the routes
- - [ ] one to deal with home and assets
+ - [x] one to deal with home 
+ - [ ]assets
  - [ ] one to deal with making the requests from the main.js
  - [ ] test with shot
 - [ ] Use client side JS to make a request straight away
-- [ ] link git to travis
+- [x] link git to travis
 
 #SYNTAX
 ```js
