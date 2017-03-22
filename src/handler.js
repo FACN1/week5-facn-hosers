@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const request = require('./request');
-const url = require('./urls'); //API URL's
 const async = require('async')
 
 
