@@ -1,5 +1,8 @@
 const fs = require('fs');
 const path = require('path');
+//const request = require('./request');
+const async = require('async')
+
 
 var extensionType = {
     'js': 'application/javascript',
@@ -41,6 +44,20 @@ function assetsHandler(req, res){
 //Create handler for API requests
 function APIHandler(req, res){
   // call request module;
+  res.writeHead(200, {'content-type': 'application/json'});
+
+  async.parallel([
+    request.weatherRequest,
+    request.roadRequest,
+    request.newsRequest
+  ], function(err, results){
+    var data = {
+      weather: results[0],
+      road: results[1],
+      news: results[2]
+    }
+    res.end(JSON.stringify(data));
+  })
 }
 
 //Create 404 handler
