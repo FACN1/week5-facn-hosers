@@ -16,7 +16,7 @@ var renderModule = (function(){
     articlesArray.forEach(function(article){
       var liNode = document.createElement('li');
       var linkNode = document.createElement('a');
-      linkNode.setAttribute('href', 'article.url');
+      linkNode.setAttribute('href', article.url);
       linkNode.innerHTML = article.description;
       liNode.appendChild(linkNode);
       newsList.appendChild(liNode);
