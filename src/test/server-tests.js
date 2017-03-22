@@ -29,7 +29,7 @@ tape('Assets Route', function(t){
   //Use shot inject to test home route
   shot.inject(router, {method: 'get', url:'/assets/main.css'}, function(res){
     t.equal(res.statusCode, 200, 'test that status code is 200');
-    t.equal(res.payload, indexFile, 'main.css was found');
+    t.equal(res.payload, cssFile, 'main.css was found');
     t.end();
   })
 })
