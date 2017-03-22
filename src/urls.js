@@ -1,4 +1,4 @@
-//const keys = require('./keys')
+const keys = require('./keys')
 
 
 var weatherAPI = 'http://api.apixu.com/v1/current.json?key=' + keys.weather + '&q=London';
