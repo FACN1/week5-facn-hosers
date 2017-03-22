@@ -1,15 +1,17 @@
-# week5-facn-hosers
+# week5-facn-hosers 
+[![Build Status](https://travis-ci.org/FACN1/week5-facn-hosers.svg?branch=master)](https://travis-ci.org/FACN1/week5-facn-hosers)
+
 Repo for FAC'N Hoser's Feeeeed project
 
 # User stories
 
-> I am a user who wants to find out the latest news stories, Matt Gregory's latest tweets, and london travel information on one page
+> I am a user who wants to read the latest news stories from London, Find out about road closures, and the current weather.
 
 # Basic interface
 
 1. User directs to page
 2. Auto loads the 3 feeds
-3. Can click to refresh individual feeds
+  - Stretch goal, can click to refresh individual feeds
   - Stretch goal, auto updates
 
 # Code Logic / Psuedo Code
@@ -20,7 +22,7 @@ Repo for FAC'N Hoser's Feeeeed project
     - main.js makes a request to the server for all the feeds.
       - for each feed, server gets a response (object) from each.
       - From the three responses, make one object to send back to main.js
-    - main.js then takes the response, renders each column - do this with a callback or parralel to make sure all renders at the same time
+    - main.js then takes the response, renders each column - do this with a callback or parallel to make sure all renders at the same time
      - make one render function that takes an object of the 3 feeds:
       - this function then calls another individual render function for each feed
 ```js
@@ -58,22 +60,23 @@ Repo for FAC'N Hoser's Feeeeed project
 
 # Potential API's
 
-- MG's Twitter
-- A news feed
-- A travel info feed (ideal one that updates a lot)
+- Apixu Weather
+- NewsApi.org
+- London TFL
 
-We don't want to have to render anything too complicated ATM, so basically a list of the latest tweets/new stories/train arrivals would be good to be able to receive.
+We don't want to have to render anything too complicated ATM, so basically a list of the latest weather/news stories/road closures would be good to be able to receive.
 
 #To dos:
-- [ ] Make skeleton files
-- [ ] Investigate API's
-- [ ] Work out how to make requests using request.module
-- [ ] Set up basic server modules mainly the routes
- - [ ] one to deal with home and assets
+- [x] Make skeleton files
+- [x] Investigate API's
+- [x] Work out how to make requests using request.module
+- [x] Set up basic server modules mainly the routes
+ - [x] one to deal with home 
+ - [ ]assets
  - [ ] one to deal with making the requests from the main.js
  - [ ] test with shot
 - [ ] Use client side JS to make a request straight away
-- [ ] link git to travis 
+- [x] link git to travis
 
 #SYNTAX
 ```js
