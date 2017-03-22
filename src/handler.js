@@ -1,6 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
+var extensionType = {
+    'js': 'application/javascript',
+    'css': 'text/css'
+  }
 //Create homeHandler function for '/' route
 function homeHandler(req, res){
   var filePath = path.join(__dirname, '..', 'public/index.html');
@@ -21,11 +25,6 @@ function assetsHandler(req, res){
   var url = req.url;
   console.log(url);
   var extension = url.split('.')[1];
-  var extensionType = {
-    "js": 'application/javascript',
-    "css": 'text/css'
-  }
-
   var filePath = path.join(__dirname, '..', 'public', url);
   fs.readFile(filePath, function (err, file) {
     if (err) {
