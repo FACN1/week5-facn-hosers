@@ -31,7 +31,7 @@ var news = request(urls.newsAPI, function(error, response, body){
 });
 
 module.exports = {
-  news: news,
+  weather: weather,
   roads: roads,
   news: news
 }
