@@ -3,6 +3,12 @@
 
 Repo for FAC'N Hoser's Feeeeed project
 
+# Instructions for local installation
+
+1. Clone this repo
+2. Create a keys.js file in src (load with keys provided on gitter)
+3. In src/handler.js uncomment line 3
+
 # User stories
 
 > I am a user who wants to read the latest news stories from London, Find out about road closures, and the current weather.
