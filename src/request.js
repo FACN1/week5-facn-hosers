@@ -8,14 +8,15 @@ var weather = request(urls.weatherAPI, function(error, response, body){
   }
   console.log('statusCode: ', response && response.statusCode); // log the response status code if a response was received
   var json = JSON.parse(body);
-  console.log('body: ', json); // log the body of the request.
+  console.log('Weather body: ', json); // log the body of the request.
   return json;
 });
 
 var roads = request(urls.roadsAPI, function(error, response, body){
   if(error){
     console.log('error: ', error);// log the error if one occurred
-  }    console.log('statusCode: ', response && response.statusCode); // log the response status code if a response was received
+  }
+  console.log('Roads statusCode: ', response && response.statusCode); // log the response status code if a response was received
   var json = JSON.parse(body);
   console.log('body: ', json); // log the body of the request.
   return json;
@@ -23,8 +24,9 @@ var roads = request(urls.roadsAPI, function(error, response, body){
 
 var news = request(urls.newsAPI, function(error, response, body){
   if(error){
-    console.log('error: ', error);// log the error if one occurred
-  }    console.log('statusCode: ', response && response.statusCode); // log the response status code if a response was received
+    console.log('News error: ', error);// log the error if one occurred
+  }
+  console.log('News statusCode: ', response && response.statusCode); // log the response status code if a response was received
   var json = JSON.parse(body);
   console.log('body: ', json); // log the body of the request.
   return json;
