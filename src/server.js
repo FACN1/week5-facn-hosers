@@ -9,7 +9,7 @@ var options = {
 }
 // create a start server function that takes a server and an options object which contains the port number, tells the server to start listening at that port
 function startServer(serv, opt){
-  serv.listen(opt.port, function(error){
+  serv.listen(process.env.PORT || opt.port, function(error){
     if (error){
       console.log(error);
     }

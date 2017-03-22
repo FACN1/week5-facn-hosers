@@ -7,5 +7,5 @@ var newsAPI = 'https://newsapi.org/v1/articles?source=the-next-web&sortBy=latest
 module.exports = {
     weatherAPI: weatherAPI,
     roadsAPI: roadsAPI,
-    newsAPI: roadsAPI
+    newsAPI: newsAPI
   }

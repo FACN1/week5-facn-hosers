@@ -3,7 +3,10 @@ const handler = require('./handler.js');
 //Create object containing our routes and their respective handlers
 var routes = {
   '/':handler.homeHandler,
-  '404':handler.errorHandler
+  '404':handler.errorHandler,
+  '/assets/main.css': handler.assetsHandler,
+  '/assets/main.js': handler.assetsHandler,
+  '/requestAPIS': handler.APIHandler
 }
 
 //Router function to deal with the routes and pass to appropriate handler
