@@ -6,8 +6,10 @@ Repo for FAC'N Hoser's Feeeeed project
 # Instructions for local installation
 
 1. Clone this repo
-2. Create a keys.js file in src (load with keys provided on gitter)
-3. In src/handler.js uncomment line 3
+2. Run npm install
+3. Create a keys.js file in src (load with keys provided on gitter)
+4. In src/handler.js uncomment line 3
+5. Run npm start and direct your browser to local host 4000
 
 # User stories
 
