@@ -29,22 +29,6 @@ function newsRequest(callback){
   callback(null, news)
 })
 };
-// var roads = request(urls.roadsAPI, function(error, response, body){
-//   if(error){
-//     console.log('error: ', error);// log the error if one occurred
-//   }
-//
-//   var JSONres = JSON.parse(body);
-//   return JSONres
-// });
-//
-// var news = request(urls.newsAPI, function(error, response, body){
-//   if(error){
-//     console.log('News error: ', error);// log the error if one occurred
-//   }
-//   var JSONres = JSON.parse(body);
-//   return JSONres
-// });
 
 module.exports = {
   weatherRequest: weatherRequest,
