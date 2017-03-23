@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-//const request = require('./request');
+//const ourrequest = require('./request');
 const async = require('async')
 
 
@@ -48,9 +48,9 @@ function APIHandler(req, res){
   res.writeHead(200, {'content-type': 'application/json'});
 
   async.parallel([
-    request.weatherRequest,
-    request.roadRequest,
-    request.newsRequest
+    ourrequest.weatherRequest,
+    ourrequest.roadRequest,
+    ourrequest.newsRequest
   ], function(err, results){
     var data = {
       weather: results[0],
