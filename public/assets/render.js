@@ -14,7 +14,7 @@ var renderModule = (function(){
       var liNode = document.createElement('li');//<li>
       var linkNode = document.createElement('a');//<a>
       linkNode.setAttribute('href', article.url);//< a href = ""></a>
-      linkNode.innerHTML = article.description;//< a href>LINK TEXT</a>
+      linkNode.textContent = article.description;//< a href>LINK TEXT</a>
       liNode.appendChild(linkNode);
       newUL.appendChild(liNode);
     })
@@ -25,7 +25,7 @@ var renderModule = (function(){
     var roadArray = responseObject.road;
     roadArray.forEach(function(road){
       var liNode = document.createElement('li');
-      liNode.innerHTML = road.displayName +': '+ road.statusSeverity;
+      liNode.textContent = road.displayName +': '+ road.statusSeverity;
       newULR.appendChild(liNode);
     })
 
@@ -33,13 +33,13 @@ var renderModule = (function(){
     var newULW = document.createElement('ul');
     newULW.id = oldULW.id
     var weatherLoc = document.createElement('h3')
-    weatherLoc.innerHTML = responseObject.weather.location.name + ": \n" //<h3> location name: /n</h3>
+    weatherLoc.textContent = responseObject.weather.location.name + ": \n" //<h3> location name: /n</h3>
     newULW.appendChild(weatherLoc)
     var weatherObj = responseObject.weather.current;
     for(var key in weatherObj){
       if(!weatherObj.hasOwnProperty(key)) continue;
       var liNode = document.createElement('li');
-      liNode.innerHTML = key +': '+ weatherObj[key];
+      liNode.textContent = key +': '+ weatherObj[key];
       newULW.appendChild(liNode);
     }
 
@@ -47,6 +47,7 @@ var renderModule = (function(){
     newsContainer.replaceChild(newUL,oldUL);
     roadContainer.replaceChild(newULR,oldULR);
     weatherContainer.replaceChild(newULW,oldULW)
+    
   }
   return {
     renderFeed: renderFeed
