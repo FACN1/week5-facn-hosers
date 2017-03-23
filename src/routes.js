@@ -1,7 +1,7 @@
 const handler = require('./handler.js');
 
 //Create object containing our routes and their respective handlers
-var routes = {
+const routes = {
   '/':handler.homeHandler,
   '404':handler.errorHandler,
   '/assets/main.css': handler.assetsHandler,
