@@ -62,8 +62,10 @@ header {
 }
 
 section {
-  min-height: 100vh;
+  height: 75vh;
   color: #5B7B7A;
+  overflow: hidden;
+  padding: 3px;
 }
 
 h2 {
@@ -73,7 +75,7 @@ h2 {
 
 @media (min-width: 720px) {
   section {
-    min-width: 32%;
+    width: 30%;
     border: 3px solid #CEB5A7;
     display: inline-block;
   }
