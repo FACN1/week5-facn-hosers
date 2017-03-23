@@ -11,10 +11,10 @@ var renderModule = (function(){
     newUL.id = oldUL.id
     var articlesArray = responseObject.news.articles;
     articlesArray.forEach(function(article){
-      var liNode = document.createElement('li');
-      var linkNode = document.createElement('a');
-      linkNode.setAttribute('href', article.url);
-      linkNode.innerHTML = article.description;
+      var liNode = document.createElement('li');//<li>
+      var linkNode = document.createElement('a');//<a>
+      linkNode.setAttribute('href', article.url);//< a href = ""></a>
+      linkNode.innerHTML = article.description;//< a href>LINK TEXT</a>
       liNode.appendChild(linkNode);
       newUL.appendChild(liNode);
     })
@@ -33,17 +33,17 @@ var renderModule = (function(){
     var newULW = document.createElement('ul');
     newULW.id = oldULW.id
     var weatherLoc = document.createElement('h3')
-    weatherLoc.innerHTML = responseObject.weather.location.name + ": \n"
+    weatherLoc.innerHTML = responseObject.weather.location.name + ": \n" //<h3> location name: /n</h3>
     newULW.appendChild(weatherLoc)
-    var weatherArray = responseObject.weather.current;
-    for(var key in weatherArray){
-      if(!weatherArray.hasOwnProperty(key)) continue;
+    var weatherObj = responseObject.weather.current;
+    for(var key in weatherObj){
+      if(!weatherObj.hasOwnProperty(key)) continue;
       var liNode = document.createElement('li');
-      liNode.innerHTML = key +': '+ weatherArray[key];
+      liNode.innerHTML = key +': '+ weatherObj[key];
       newULW.appendChild(liNode);
     }
 
-
+    //replace old UL elements with newly populated ones above
     newsContainer.replaceChild(newUL,oldUL);
     roadContainer.replaceChild(newULR,oldULR);
     weatherContainer.replaceChild(newULW,oldULW)
