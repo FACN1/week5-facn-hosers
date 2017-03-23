@@ -14,6 +14,7 @@ function homeHandler(req, res){
   fs.readFile(filePath, function(error, file){
     if (error){
       console.log(error);
+      return;
     }
     else{
       res.writeHead(200, {'content-type': 'text/html'});
@@ -29,9 +30,9 @@ function assetsHandler(req, res){
   console.log(url);
   var extension = url.split('.')[1];
   var filePath = path.join(__dirname, '..', 'public', url);
-  fs.readFile(filePath, function (err, file) {
-    if (err) {
-      console.log(err);
+  fs.readFile(filePath, function (error, file) {
+    if (error) {
+      console.log(error);
       return;
     }
     else{
