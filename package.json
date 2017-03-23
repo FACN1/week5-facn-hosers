@@ -18,9 +18,11 @@
   },
   "homepage": "https://github.com/FACN1/week5-facn-hosers#readme",
   "devDependencies": {
-    "async": "^2.1.5",
-    "request": "^2.81.0",
     "shot": "^3.4.0",
     "tape": "^4.6.3"
+  },
+  "dependencies": {
+    "async": "^2.1.5",
+    "request": "^2.81.0",
   }
 }
