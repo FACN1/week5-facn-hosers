@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const request = require('./request');
+const ourrequest = require('./request');
 const async = require('async')
 
 
@@ -14,6 +14,7 @@ function homeHandler(req, res){
   fs.readFile(filePath, function(error, file){
     if (error){
       console.log(error);
+      return;
     }
     else{
       res.writeHead(200, {'content-type': 'text/html'});
@@ -29,9 +30,9 @@ function assetsHandler(req, res){
   console.log(url);
   var extension = url.split('.')[1];
   var filePath = path.join(__dirname, '..', 'public', url);
-  fs.readFile(filePath, function (err, file) {
-    if (err) {
-      console.log(err);
+  fs.readFile(filePath, function (error, file) {
+    if (error) {
+      console.log(error);
       return;
     }
     else{
@@ -47,9 +48,9 @@ function APIHandler(req, res){
   res.writeHead(200, {'content-type': 'application/json'});
 
   async.parallel([
-    request.weatherRequest,
-    request.roadRequest,
-    request.newsRequest
+    ourrequest.weatherRequest,
+    ourrequest.roadRequest,
+    ourrequest.newsRequest
   ], function(err, results){
     var data = {
       weather: results[0],
