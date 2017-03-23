@@ -1,12 +1,10 @@
-const keysObj = {
-  roads:process.env.API_KEY_1,
-  roadsID:process.env.API_KEY_2,
-  weather:process.env.API_KEY_3,
-  news:process.env.API_KEY_4
-}
-console.log(keysObj.news);
-if (keysObj.news){
-  var keys = keysObj;
+if (process.env.API_KEY_1){
+  var keys = {
+    roads:process.env.API_KEY_1,
+    roadsID:process.env.API_KEY_2,
+    weather:process.env.API_KEY_3,
+    news:process.env.API_KEY_4
+  }
 }
 else{
   var keys = require('./keys')
