@@ -5,8 +5,8 @@ const async = require('async')
 
 
 var extensionType = {
-    'js': 'application/javascript',
-    'css': 'text/css'
+  'js': 'application/javascript',
+  'css': 'text/css'
   }
 //Create homeHandler function for '/' route
 function homeHandler(req, res){
