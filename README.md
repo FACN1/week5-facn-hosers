@@ -1,4 +1,4 @@
-# week5-facn-hosers 
+# week5-facn-hosers
 [![Build Status](https://travis-ci.org/FACN1/week5-facn-hosers.svg?branch=master)](https://travis-ci.org/FACN1/week5-facn-hosers)
 
 Repo for FAC'N Hoser's Feeeeed project
@@ -79,7 +79,7 @@ We don't want to have to render anything too complicated ATM, so basically a lis
 - [x] Investigate API's
 - [x] Work out how to make requests using request.module
 - [x] Set up basic server modules mainly the routes
- - [x] one to deal with home 
+ - [x] one to deal with home
  - [ ]assets
  - [ ] one to deal with making the requests from the main.js
  - [ ] test with shot
@@ -103,3 +103,21 @@ var syntaxFunc = function(arg1, arg2){
   //No blank lines before or after logic in functions, but should use one to space out code when logically appropriate (maybe add a comment!)
 }
 ```
+
+#SGC
+
+- Implement the soft deadlines better
+- Have hard deadline of every 1 hour tell each other exactly where they are.
+- Allow each other to interrupt our Work
+- Raise issues during our work for a to do list
+- Keep deep reviews of Pull requests
+- Liwan/other spaces to work, with peace and quiet
+- Pre-presentation run through was good
+- Don't interrupt each other during presentation, but admit if you don't know and ask if someone else can answer that.
+- Try and use the nodemon module to not have to reset the server every time
+- Maybe try and be stricter on TDD
+- Continue with initial readme but start updating better/more often.
+- Before you put a pull request in, update the readme appropriately (if it's a big feature)
+- Only merge if everyone understands the recode
+- Keep the strong commenting from day 1
+- maybe try and look at css earlier to have better initial styling
