@@ -47,15 +47,6 @@ var renderModule = (function(){
     newsContainer.replaceChild(newUL,oldUL);
     roadContainer.replaceChild(newULR,oldULR);
     weatherContainer.replaceChild(newULW,oldULW)
-
-
-    // var weatherSection = document.createElement('section');
-    // weatherSection.className = 'weather-container';
-    // var weatherH2 = document.createElement('h2').innerHTML = 'WEATHER';
-    // var weatherList = document.createElement('ul');
-
-    //oldFeed.parentNode.replaceChild(newFeed, oldFeed);
-
   }
   return {
     renderFeed: renderFeed
