@@ -6,10 +6,10 @@ const keysObj = {
 }
 
 if (keysObj.news){
-  const keys = keysObj;
+  var keys = keysObj;
 }
 else{
-  const keys = require('./keys')
+  var keys = require('./keys')
 }
 
 
