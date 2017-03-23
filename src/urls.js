@@ -1,4 +1,16 @@
-const keys = require('./keys')
+const keysObj = {
+  roads:process.env.API_KEY_1,
+  roadsID:process.env.API_KEY_2,
+  weather:process.env.API_KEY_3,
+  news:process.env.API_KEY_4
+}
+
+if (keysObj.news){
+  const keys = keysObj;
+}
+else{
+  const keys = require('./keys')
+}
 
 
 var weatherAPI = 'http://api.apixu.com/v1/current.json?key=' + keys.weather + '&q=London';
