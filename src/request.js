@@ -4,6 +4,7 @@ const urls = require('./urls'); //API URL's
 // send a request to the API url's
 function weatherRequest(callback){
   request(urls.weatherAPI, function(error, response, body){
+
   if(error){
     console.log('error: ', error);// log the error if one occurred
     // return error
@@ -32,6 +33,7 @@ function newsRequest(callback){
   var news =  JSON.parse(body);
   callback(null, news)
 })
+
 };
 
 module.exports = {
