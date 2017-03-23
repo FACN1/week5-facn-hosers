@@ -6,7 +6,8 @@ function weatherRequest(callback){
   request(urls.weatherAPI, function(error, response, body){
   if(error){
     console.log('error: ', error);// log the error if one occurred
-    return error
+    // return error
+    callback(error);
   }
   var weather =  JSON.parse(body);
   callback(null, weather);
@@ -16,7 +17,7 @@ function roadRequest(callback){
   request(urls.roadsAPI, function(error, response, body){
   if(error){
     console.log('error: ', error);// log the error if one occurred
-    return error
+    callback(error);
   }
   var road =  JSON.parse(body);
   callback(null, road)
@@ -26,7 +27,7 @@ function newsRequest(callback){
   request(urls.newsAPI, function(error, response, body){
   if(error){
     console.log('error: ', error);// log the error if one occurred
-    return error
+    callback(error);
   }
   var news =  JSON.parse(body);
   callback(null, news)
